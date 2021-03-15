@@ -1,0 +1,2088 @@
+/* CSS Document */
+
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Shippori Mincho', serif;
+  max-width: 100%;
+  text-decoration: none;
+
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: black;
+  box-sizing: border-box;
+  width: 100%;
+  height: 75px;
+  padding: 0px 30px;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 65px;
+  padding-right: 10px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu ul {
+  display: flex;
+  margin: 0px;
+  padding: 0px;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul li a {
+  height: 50px;
+  line-height: 50px;
+  margin: 0px;
+  padding: 0px 20px;
+  display: flex;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family:'Shippori Mincho', serif ;
+  color: white;
+}
+
+.menu ul li a:hover {
+  background-color: #E8E8E8;
+  color: #3F3F3F;
+}
+
+.menu {
+  margin-right: auto;
+}
+
+.search-icon:before {
+  content: '\f002';
+  font-family: fontAwesome;
+  line-height: 30px;
+  color: white;
+}
+
+.search-icon.active:before {
+  content: '\f00d';
+}
+
+.menu ul li ul {
+  position: absolute;
+  left: -35px;
+  background-color: #161616;
+  flex-direction: column;
+  display: none !important;
+}
+
+.menu ul li {
+  position: relative;
+}
+
+.menu ul li ul li {
+  display: block;
+  width: 200px;
+}
+
+.menu ul li ul li a {
+  color: #ACACAC !important;
+  border-bottom: 1px solid #424242;
+}
+
+.menu ul li.active ul {
+  display: block !important;
+}
+
+.menu ul li ul li a:hover {
+  background-color: #1D1D1D !important;
+  color: #D1D1D1 !important;
+}
+
+.sub-menu:before {
+  content: '\f0d7';
+  font-family: fontAwesome;
+  position: absolute;
+  line-height: 50px;
+  font-size: 12px;
+  color: #727272;
+  right: 10px;
+}
+
+.search-box {
+  width: 100%;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: #2a2829;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #FFFFFF;
+  display: none;
+  padding: 0px 30px 0px 30px;
+  transition: all ease 0.5s;
+}
+
+.navigation {
+  position: relative;
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.01);
+}
+
+.search-box input {
+  width: 70%;
+  height: 50px;
+  outline: none;
+  background: transparent;
+  border: none;
+  color: #E3E3E3;
+  font-size: 16px;
+}
+
+.s-icon {
+  color: #CDCDCD;
+}
+
+.search-box input::placeholder {
+  color: #AFAFAF;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 12px;
+}
+
+.search-box.active {
+  display: flex;
+}
+
+
+@media(max-width:900px) {
+  .toggle:before {
+      content: '\f0c9';
+      font-family: fontAwesome;
+      line-height: 30px;
+      color: white;
+      display: none;
+  }
+  .logo {
+      border: none;
+  }
+  .logo img {
+      height: 100px;
+      padding-right:278px;
+  }
+  .menu {
+      margin-right: 0px !important;
+  }
+  .owl-carousel {
+      display: none;
+      width: 100%;
+  }
+  header nav ul {
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+      height: calc(100vh - 50px);
+      background-color: #353535;
+      top: 50px;
+      left: 0;
+      transition: 0.5s;
+      display: block !important;
+      overflow: hidden;
+      display: none !important;
+  }
+  header {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+  }
+  nav ul li a {
+      border-bottom: 1px solid #474747;
+      border-right: none !important;
+      color: #bebebe !important;
+  }
+  .toggle.active:before {
+      content: '\f00d' !important;
+  }
+  nav ul li a:hover {
+      background-color: #2F2F2F !important;
+  }
+  header.active-menu ul {
+      display: block !important;
+  }
+  .toggle:before {
+      display: block;
+  }
+  header.active-menu,
+  header.active-search {
+      background-color: #353535;
+      height: 50px;
+      color: #FFFFFF;
+  }
+  .search-icon.active:before {
+      color: #FFFFFF;
+  }
+  .menu ul li ul {
+      position: relative;
+      top: 0px;
+      height: auto;
+  }
+  .menu ul li ul li {
+      width: 100%;
+  }
+  header.active-menu .logo,
+  header.active-menu .search-icon {
+      display: none;
+  }
+  header.active-search .logo,
+  header.active-search .toggle {
+      display: none;
+  }
+}
+@media screen and (max-width:420px){
+  .logo img{
+      padding-right:32%;
+  }
+}
+
+
+button {
+  cursor: pointer;
+}
+
+.crouselone {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.crouselvideo {
+  width: 50%;
+  height: 100%;
+}
+
+.crouselimage {
+  width: 50%;
+  height: 80%;
+}
+
+.crouselimage img {
+  width: 107%;
+  height: 380px;
+  opacity: 1;
+  backface-visibility: hidden;
+}
+
+
+
+.btnapply {
+  position: absolute;
+  top: 61%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: rgb(249, 253, 8);
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+.btnapply a{
+  color: #000; 
+
+}
+
+.circles {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.nav2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav2contents {
+  display: flex;
+  justify-content: space-between;
+  width: 93%;
+  margin: auto;
+}
+
+.latestnews,
+.addmission,
+.academics,
+.events,
+.research,
+.about,
+.campus {
+  background-color: #13439C;
+  width: 6%;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 6%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  box-shadow: 0 0 0 8px #fff;
+  transition: transform .2s;
+}
+
+.latestnews,
+.addmission,
+.academics,
+.events,
+.research,
+.about,
+.campus i {
+  font-size: 30px;
+}
+
+.latestnews:hover,
+.addmission:hover,
+.academics:hover,
+.events:hover,
+.research:hover,
+.about:hover,
+.campus:hover {
+  transform: scale(1.5);
+}
+
+.fa {
+  color: white !important
+}
+
+.content1,
+.content2,
+.content3,
+.content4,
+.content5,
+.content6,
+.content7 {
+  display: flex;
+  font-family: 'Shippori Mincho', serif;
+  width: 10%;
+  justify-content: center;
+  color: black;
+  font-size: 20px;
+  margin: auto;
+}
+
+.content1 {
+  width: 11%;
+}
+
+ .campus .fa{
+  content: "\f19c";
+  font-size: 26px;
+ }
+
+
+@media screen and (max-width: 1657px) {
+  .crouselimage img {
+      width: 107%;
+      height: 462px;
+  }
+}
+@media screen and (max-width: 1650px){
+  .crouselimage img {
+    height:454px;
+}
+}
+@media screen and (max-width: 1250px){
+  .crouselimage img {
+    height:363px;
+}
+.btnapply {
+  top: 34%
+}
+}
+@media screen and (max-width: 1024px) {
+  .crouselimage img {
+      width: 107%;
+      height: 288px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 18%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 13px;
+      padding: 15px 26px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .menu ul li a {
+      height: 50px;
+      line-height: 50px;
+      margin: 0px;
+      padding: 0px 10px;
+      display: flex;
+      font-size: 9px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-family: 'Shippori Mincho', serif;
+      color: white;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 8%;
+      height: 89px;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 0 0 8px #fff;
+      transition: transform .2s;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 10%;
+      justify-content: center;
+      color: black;
+      font-size: 15px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .crouselimage img {
+      width: 101%;
+      height: 225px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 17%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 13px;
+      padding: 15px 26px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 16%;
+      justify-content: center;
+      color: black;
+      font-size: 12px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .crouselimage img {
+      width: 101%;
+      height: 216px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 20%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 13px;
+      padding: 15px 26px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 8%;
+      height: 81px;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 0 0 8px #fff;
+      transition: transform .2s;
+  }
+  .circles {
+      width: 100%;
+      height: 100px;
+      display: flex;
+      margin-top: -30px;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 16%;
+      justify-content: center;
+      color: black;
+      font-size: 12px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .crouselimage img {
+      width: 101%;
+      height: 180px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 53%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 13px;
+      padding: 14px 11px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 8%;
+      height: 66px;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 0 0 8px #fff;
+      transition: transform .2s;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 16%;
+      justify-content: center;
+      color: black;
+      font-size: 12px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .crouselimage img {
+      width: 101%;
+      height: 152px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 25%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 9px;
+      padding: 9px 13px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 11%;
+      height: 59px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      box-shadow: 0 0 0 8px #fff;
+      transition: transform .2s;
+  }
+  .circles {
+      margin-top: -24px;
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 16%;
+      justify-content: center;
+      color: black;
+      font-size: 11px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .crouselimage img {
+      width: 107%;
+      height: 135px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 20%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 9px;
+      padding: 9px 13px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .campus .fa{
+    font-size: 16px;
+    align-items: center;
+    justify-content: center;
+    content: "\f19c";
+    display: flex;
+  }
+  
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 16%;
+      justify-content: center;
+      color: black;
+      font-size: 7px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .crouselimage img {
+      width: 107%;
+      height: 115px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 22%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 9px;
+      padding: 9px 13px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 8%;
+      height: 44px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      box-shadow: 0 0 0 8px #fff;
+      transition: transform .2s;
+  }
+  .circles {
+      margin-top: -16px;
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .crouselimage img {
+      width: 107%;
+      height: 105px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 23%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 9px;
+      padding: 9px 13px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 8%;
+      height: 44px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      box-shadow: 0 0 0 8px #fff;
+      transition: transform .2s;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .crouselimage img {
+      width: 107%;
+      height: 100px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 23%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 9px;
+      padding: 6px 6px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about {
+      background-color: #13439C;
+      width: 8%;
+      height: 40px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      box-shadow: 0 0 0 4px #fff;
+      transition: transform .2s;
+  }
+  .campus {
+      background-color: #13439C;
+      width: 8%;
+      height: 40px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      box-shadow: 0 0 0 4px #fff;
+      transition: transform .2s;
+  }
+  .circles {
+      margin-top: -31px;
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 16%;
+      justify-content: center;
+      color: black;
+      font-size: 7px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .crouselimage img {
+      width: 107%;
+      height: 90px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 27%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 9px;
+      padding: 7px 7px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 8%;
+      height: 40px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 19px;
+      box-shadow: 0 0 0 4px #fff;
+      transition: transform .2s;
+  }
+  .circles {
+      margin-top: -31px;
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 14%;
+      justify-content: center;
+      color: black;
+      font-size: 6px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .crouselimage img {
+      width: 107%;
+      height: 80px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 6%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 9px;
+      padding: 7px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 14%;
+      justify-content: center;
+      color: black;
+      font-size: 5px;
+      margin: auto;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  .crouselimage img {
+      width: 107%;
+      height: 78px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 21%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 8px;
+      padding: 5px 6px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+}
+
+@media screen and (max-width: 240px) {
+  .crouselimage img {
+      width: 107%;
+      height: 68px;
+  }
+  .btnapply {
+      position: absolute;
+      top: 42%;
+      left: 75%;
+      transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+      background-color: rgb(249, 253, 8);
+      color: #000;
+      font-size: 7px;
+      padding: 7px 10px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      text-align: center;
+  }
+  header {
+      background-color: black;
+      box-sizing: border-box;
+      width: 100%;
+      height: 105px;
+      padding: 0px 13px;
+      display: flex;
+      align-items: center;
+  }
+  .latestnews,
+  .addmission,
+  .academics,
+  .events,
+  .research,
+  .about,
+  .campus {
+      background-color: #13439C;
+      width: 11%;
+      height: 32px;
+      margin: auto;
+      border-radius: 50%;
+      margin-bottom: 6%;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      box-shadow: 0 0 0 4px #fff;
+      transition: transform .2s;
+  }
+  .circles {
+      margin-top: -40px;
+      width: 100%;
+      height: 72px;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  .content1,
+  .content2,
+  .content3,
+  .content4,
+  .content5,
+  .content6,
+  .content7 {
+      display: flex;
+      font-family: 'Shippori Mincho', serif;
+      width: 14%;
+      justify-content: center;
+      color: black;
+      font-size: 5px;
+      margin: auto;
+  }
+}
+.latestnews-section,.admission-section{
+  display: flex;
+  width: 100%;
+  height: 400px;
+  margin-top: 5%;
+}
+.latestmore,.admissionmore{
+  flex-direction: column;
+  width: 50%;
+  height:80%;
+color: white;
+ margin: auto;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 50px;
+}
+.latestnewshead,.admissionhead{
+  width: 100%;
+  height:46%;
+background-color: #13439C;
+}
+.latestbutton,.addmisiionbutton{
+  position: relative;
+  top: 15%;
+  left:45%;
+  background: none;
+  color: #13439C;
+  font-size: 15px;
+  font-weight:500;
+  border: 2px solid #13439C;
+  outline: none;
+  width: 15%;
+  height: 13%;
+  border-radius: 25px;
+}
+.latestbutton:hover,.addmisiionbutton:hover{
+  background-color: #13439C;
+  color: white;
+  border:none
+}
+
+.addmisiionbutton{
+  margin-right:15%;
+}
+.latestnewscards{
+  display: flex;
+  width: 50%;
+  overflow-x: hidden;
+}
+
+.wrapper{
+  width:50%;
+}
+.carousel{
+  margin: auto;
+  padding: 0 50px;
+}
+.carousel .card{
+  text-align: center;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+}
+.carousel .card-1,.carousel .card-2, .carousel .card-3{
+  background: #111;
+  height: 320px;
+}
+.card img{
+ height:40%;
+}
+.card h6{
+height:15%;
+}
+.card p{
+  height: 20%;
+}
+.carousel h5{
+  color: goldenrod;
+}
+.carousel p{
+  color: white;
+  font-size: 10px;
+}
+.carousel .latestlink{
+  text-decoration: none;
+  font-size: 10px;
+  color: #fff;
+}
+.carousel .latestlink:hover{
+color: red;
+}
+
+.owl-dots{
+  text-align: center;
+}
+.owl-dot{
+  height: 15px;
+  width: 45px;
+  margin: 0 5px;
+  outline: none;
+  border-radius: 14px;
+  border: 2px solid #0072bc!important;
+  box-shadow: 0px 4px 15px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+.owl-dot.active,
+.owl-dot:hover{
+  background: #0072bc!important;
+}
+
+.imgcontent{
+  background-color: #111;
+  width: 20px;
+}
+.admissioncrousel .item section button a{
+     text-decoration: none;
+   color: goldenrod;
+
+}
+@media screen and (max-width:1230px){
+
+    .carousel .card-1,.card-2,.card-3 {
+      height: 404px;
+      
+  }
+.carousel .card-1 {
+  height: 322px;
+}
+  .card p{
+    display: none;
+  }
+}
+@media screen and (max-width: 940px){
+  .latestnews-section .owl-carousel .owl-item img{
+    height:120px;
+  }
+  .carousel p{
+    display: none;
+  }
+}
+
+ @media screen and (max-width:420px){
+  .carousel .card-1,.card-2,.card-3 {
+height: 290px;  
+}
+.latestnews-section{
+  flex-direction: column;
+}
+.card p{
+  display:none;
+  
+}
+.latestbutton{
+  height: 40px;
+  margin-right:-36%;
+  width: 70px;
+}
+.latestnewshead {
+  width: 313%;
+  height: 87%;
+}
+.latestnews-section .owl-carousel {
+  margin-top: 18%;
+  width: 165%;
+}}
+ .admissioncrousel{
+   width: 50%;
+   display: flex;
+   flex-direction: column;
+   
+ }
+ .admissioncrousel .admissioncard{
+  width:200%;
+ }
+ .admissionhead{
+   margin-left:5% ;
+ }
+ .admissioncrousel .item section{
+   background-color: #000;
+   color: #fff;
+width: 105%;
+ }
+
+ .admissioncrousel .item section button {
+   background: none;
+   outline: none;
+   border: none;
+   margin-left: 50%;
+ }
+
+
+ @media screen and (max-width:1500px){
+   .admission-section .owl-carousel .owl-item img{
+     width:92%;
+   }
+   .admission-section .owl-carousel {
+     width: 81%;
+     margin-left: 5%;
+   }
+   .admissioncrousel .item section button{
+    margin-left:15%;
+  }
+ }
+ @media screen and (max-width:1200px){
+  .admission-section .owl-carousel .owl-item img {
+    width: 76%;
+}
+ }
+ @media screen and (max-width:940px){
+  .admission-section .owl-carousel .owl-item img {
+    width: 58%;
+}
+.admissioncrousel .item section button{
+  margin-left:10%;
+}
+.admissionmore{
+  margin-bottom: 15%;
+} 
+
+ }
+
+ @media screen and (max-width:420px){
+   .admission-section{
+    flex-direction: column-reverse;
+  margin-top: 80%;
+  height: 326px;
+   }
+   .admission-section .owl-carousel {
+    margin-left: -5%;
+}
+   .admissionmore{
+     width: 100%;
+     height: 340px;
+   }
+   .admissioncrousel{
+     width: 100%;
+align-items: center;   }
+   .admissioncrousel .owl-carousel .owl-item img {
+    display: block;
+    width: 55%;
+      height: 248px;
+}
+.admissioncrousel .item section button{
+  margin-left: 20%;
+}
+.addmisiionbutton {
+  height: 35px;
+  width: 18%;
+  margin-right: 57%;
+}
+ }
+
+.academics-section{
+  display: flex;
+  width: 100%;
+  font:50px;
+  align-items: center;
+  justify-content: center;
+}
+.academichead{
+  font-family: 'Shippori Mincho', serif;
+  background-color: #13439C;
+  text-align: center;
+  height:110px;
+font-size: 50px;
+color: #fff;
+margin-bottom:0.5%;
+}
+.academichead section{
+  font-size:20px;
+}
+.academicscrousel{
+  display: flex;
+  width: 60%;
+  overflow-x:hidden;
+  margin: auto;
+  margin-left: 20%;
+}
+.academiccontent{
+  width: 100%;
+    top: 68%;
+    position: absolute;
+    background: rgba(0,0,0,0.5);
+    color:white;
+    height: 30%;
+}
+.academiccontent h2{
+  margin:0.2%;
+   color: rgb(246, 179, 8);
+  padding:0.5%;
+  font-weight: 900;
+}
+.academiccontent p{
+  padding:1%;
+font-size:13px;
+}
+.academiclink{
+padding:1%;
+text-decoration: none;
+color: rgb(246, 179, 8);
+}
+ .academicscrousel .owl-carousel .owl-item img {
+  height:350px;
+}
+
+
+@media screen and (max-width:1500px){
+  .academicscrousel .owl-carousel  {
+      width: 85%;
+  }
+}
+
+@media screen and (max-width:1200px){
+  .academiccontent {
+    width: 63%;
+  }
+}
+@media screen and (max-width:940px){
+ 
+  .academicscrousel .owl-carousel .owl-item img {
+    width: 62%;
+    height: 356px;
+}
+  .academiccontent {
+    width: 53%;
+    height: 52%;
+    top: 53%;
+  }
+}
+@media screen and (max-width:850px){
+  .admission-section .owl-carousel .owl-item img {
+    width: 46%;
+    height: 250px;
+}
+.admissionmore{
+  margin-left: -6%;
+}
+.latestnews-section .carousel .card-1, .card-2, .card-3 {
+  height: 325px;
+}
+.admissioncrousel .item section button {
+  margin-left: 0;
+}
+.latestbutton ,.addmisiionbutton{
+  width:35%;
+}
+
+}
+@media screen and (max-width:420px){
+  .academichead{
+    margin-top: 5%;
+  }
+  .academicscrousel{
+    width: 100%;
+    margin-left: 5%;
+  }
+ .academicscrousel .owl-carousel.owl-drag .owl-item{
+   width:360px;
+ }
+ 
+.academicscrousel .owl-carousel .owl-item img{
+  width:50%;
+    height: 247px;
+}
+.academiccontent {
+  width: 49%;
+  top: 37%;
+  position: absolute;
+  color: white;
+  height: 67%;
+}
+}
+.campus-section{
+  margin-top: 10%;
+}
+.campus-section,.event-section,.research-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #13439C;
+  flex-direction: column;
+  color: #fff;
+  padding-top:5%;
+}
+.campus-header,.event-header,.research-header{
+margin-bottom:10%;
+font-size:50px;
+display: flex;
+flex-direction:column;
+justify-content: center;
+align-items: center;
+
+}
+.campus-header section,.event-header section,.research-header section{
+  font-size: 20px;
+}
+
+.contain{
+  position: relative;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contain .card2{
+  position: relative;
+  max-width:300px;
+  height:215px ;
+  background :#fff;
+  margin:30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+  transition: 0.3s ease-in-out;
+}
+.contain .card2:hover{
+  height:320px ;
+}
+.contain .card2 .content{
+  position: relative;
+  margin-top: -140px;
+  padding: 10px 15px;
+  text-align: center;
+  color: #111;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+.contain .card2:hover .content{
+  visibility:visible;
+  opacity: 1;
+  margin-top: -40px;
+  transition-delay: 0.3s;
+}
+.contain .card2 .imgbx{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  top:-60px ;
+  left: 20px;
+  z-index: 1;
+  box-shadow: 0 5ox 20px rgb(0,0,0,0.2);
+}
+.contain .card2 .imgbx img{
+  max-width:100%;
+  border-radius: 4px;
+  height:78%;
+}
+.contain .card2 h3{
+  color: #000;
+}
+.cardbutton{
+  width:30%;
+  height:28%;
+  background-color:#13439C;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+}
+.content{
+  font-size:15px;
+}
+.cardbutton a{
+  text-decoration: none;
+  color: white;
+}
+.campusbutton{
+width: 9%;
+  height: 36px;
+  background-color:white;
+  border-radius: 25px;
+  outline: none;
+  border: none;
+  color: #0072bc;
+
+}
+.campusbutton:hover{
+  background-color:#13439C;
+}
+.campusbutton:hover a{
+  color: white;
+}
+.campusbutton a{
+  text-decoration: none;
+  color: #13439C
+}
+ @media screen and (max-width:420px){
+  .campus-header, .event-header, .research-header {
+    font-size: 45px;
+  }
+  .campus-header section, .event-header section, .research-header section{
+    font-size: 15px;
+    margin-left:4%;
+  }
+  .campus-section .contain, .event-section .contain, .research-section .contain{
+    flex-direction: column;
+  }
+  .campusbutton {
+    width: 32%;
+ }
+ .event-section{
+   height: 1400px;
+ }
+ .research-section {
+  height: 1611px !important;
+}
+}
+.event-section .contain .imgbx img{
+  height: 95%;
+}
+.event-section .contain .card2{
+  width:25%;
+  height:250px;
+}
+.event-section .contain .card2 h4{
+  color: #000;
+}
+.event-section .contain .card2:hover{
+  height: 400px;
+}
+.event-section .contain .content{
+  font-size: 13px;
+}
+
+.research-section{
+  height: 735px;
+}
+
+
+.research-section .contain .card2{
+  width:20%;
+}
+.research-section .contain .card2 img{
+  width:75%;
+  height:85%;
+  margin-left:-8px
+}
+.research-section .contain .card2 h4{
+  color: #000;
+  margin-left:-5%;
+}
+
+.research-section .contain .card2 p{
+font-size: 12px;
+}
+.about-section{
+width: 100%;
+display: flex;
+background: linear-gradient(to bottom, #a2a4eb 0%, #3e5b79 100%);
+height: 750px;
+flex-direction: column;
+}
+.about-header{
+  background-color: #fff;
+  color: #13439C;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+}
+.aboutheading{
+font-size: 40px;
+margin-bottom: 2%
+}
+.aboutcontent{
+  margin-top: 20%;
+  width: 100%;
+  display: flex;
+  margin-left: 15%;
+}
+.aboutmerit{
+  width: 45%;
+}
+.aboutvm{
+  width: 55%;
+}
+.wrapper .outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.wrapper .card3{
+  background: #fff;
+  width: 430px;
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  justify-content: space-between;
+  border-radius: 100px 20px 20px 100px;
+  box-shadow: 0px 10px 15px rgba(0,0,0,0.1);
+  animation: animate 15s linear infinite;
+  animation-delay: calc(3s * var(--delay));
+}
+.outer:hover .card3{
+  animation-play-state: paused;
+}
+.wrapper .card3:last-child{
+  animation-delay: calc(-3s * var(--delay));
+}
+@keyframes animate {
+  0%{
+    opacity: 0;
+    transform: translateY(100%) scale(0.5);
+  }
+  5%, 20%{
+    opacity: 0.4;
+    transform: translateY(100%) scale(0.7);
+  }
+  25%, 40%{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0%) scale(1);
+  }
+  45%, 60%{
+    opacity: 0.4;
+    transform: translateY(-100%) scale(0.7);
+  }
+  65%, 100%{
+    opacity: 0;
+    transform: translateY(-100%) scale(0.5);
+  }
+}
+.card3 .content{
+  display: flex;
+  align-items: center;
+}
+.wrapper .card3 .img{
+  height: 90px;
+  width: 90px;
+  position: absolute;
+  left: -5px;
+  background: #fff;
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+}
+.card3 .img img{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.card3 .details{
+  margin-left: 80px;
+}
+.details span{
+  font-size: 10px;
+  color: #13439C;
+}
+.details p{
+  font-size: 9px;
+}
+.card3 a{
+  text-decoration: none;
+  padding: 7px 18px;
+  border-radius: 25px;
+  color: #fff;
+  background: linear-gradient(to bottom, #bea2e7 0%, #86b7e7 100%);
+  transition: all 0.3s ease;
+}
+.card3 a:hover{
+  transform: scale(0.94);
+}
+.aboutcontent .aboutmerit .aboutcro1{
+  width: 53%;
+  margin-right: 17%;
+}
+.aboutcontent .aboutmerit .aboutcro2{
+  width: 50%;
+}
+.aboutcontent .aboutmerit .aboutcro1 img{
+width: 93%;
+height: 136px;
+}
+.aboutcontent .aboutmerit .aboutcro2 img{
+  width: 80%;
+}
+.aboutmerit .owl-dot{
+  display: none;
+}
+ #c1{
+  width: 90%;
+}
+
+
+@media screen and (max-width:1500px){
+ 
+ #one img {
+    width:79%;
+  }
+}
+@media screen and (max-width:1230px){
+  .aboutcontent .aboutmerit .aboutcro1 img {
+    width: 72%
+}
+#one img{
+  width: 62%;
+}
+.aboutcontent .aboutmerit .aboutcro2 img {
+  width: 62%;
+}
+}
+@media screen and (max-width:830px){
+  .aboutcontent .aboutmerit .aboutcro1 img {
+    width: 61%;
+  }
+ .aboutcontent .aboutmerit .aboutcro2 img {
+  display: none;
+}
+
+.aboutcontent
+{
+  flex-direction: column;
+  margin-left: 31%;
+}
+.aboutcro2{
+  margin-top:65%;
+}
+.aboutcontent .aboutmerit .aboutcro1 {
+  width: 75%;
+}
+}
+@media screen and (max-width:420px){
+  .about-section{
+    height:1000px;
+  }
+  .aboutcontent
+  {
+    flex-direction: column;
+    margin-left: 8%;
+  }
+  
+  .aboutmerit{
+    width:85%;
+    margin-left:12%;
+  }
+  .wrapper .card3{
+    width: 300px;
+    margin-left: 25%;
+  }
+  .aboutvm{
+      margin-left: 13%;
+      margin-top: 18%;
+  
+  }
+  .about-header {
+    padding: 5%;
+  }
+  .aboutheading section{
+    padding: 11%;
+  }
+  #one img{
+    width: 280px;
+  }
+  #two img{
+    width: 280px;
+  }
+  #c1{
+    width: 76%;
+  }
+}
+
+footer {
+  background-color: #353745;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer ul {
+  list-style: none;
+}
+
+.f-logo img {
+  width: 200px;
+  height: 100px;
+}
+
+.up-section ul , .dwn-section ul{
+  margin: 0px;
+  padding: 0px 20px;
+}
+
+.up-section h1, .dwn-section h1 {
+  color: #9697a0;
+  font-size: 20px;
+}
+
+.up-section ul li a,.dwn-section ul li a {
+  font-size: 16px;
+  color:#575a70;
+  
+}
+.up-section ul li p{
+  font-size: 16px;
+  color:#575a70;
+}
+.up-section,.dwn-section{
+  display: flex;
+  justify-content: space-between;
+  padding: 3%;
+  width: 80%;
+  flex-wrap: wrap;
+}
+
+.up-section {
+  border-bottom: 1px solid #545562;
+}
+.social-icons a{
+  width: 35px;
+  height: 35px;
+  margin: 0px 5px;
+  background-color: #424356;
+  box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons{
+  display: flex;
+}
+.f-search input{
+  height: 35px;
+  width: 200px;
+  text-align: center;
+  border: none;
+  outline: none;
+}
+.social-icons i{
+  color: #FFFFFF;
+  font-size: 14px;
+}
+.copyright{
+  font-size: 12px;
+  color: #b3b3b3;
+}
+.up-section ul li a:hover,.dwn-section ul li a:hover{
+  color: #9697a0;
+}
+.social-icons a:hover{
+  background-color: #9a9ff6;
+  transition: all ease 0.5s;
+}
+.social-icons a:hover i{
+  color: #424356;
+}
+@media(max-width:1024px){
+  .f-search{
+      margin: 20px auto;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      justify-content: center;
+  }
+  .f-search h1{
+      margin: 20px;
+
+  }
+}
+@media(max-width:720px){
+  .up-section,.dwn-section{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+  .up-section ul h1 , .dwn-section ul h1{
+      font-size: 25px;
+  }
+  .up-section ul li , .dwn-section ul li{
+      text-align: center;
+      margin: 10px;
+  }
+  .up-section ul li a , .dwn-section ul li a{
+      font-size: 20px;
+  }
+  .f-logo{
+      border: 1px solid #545562;
+  }
+  .f-search{
+      display: block;
+  }
+}
+
+/* extra media======================= */
+ @media screen and (max-width:1950px) and (min-width: 1800px){ 
+  .campus-section {
+    margin-top: 6%;
+}
+  .menu ul li a {
+    padding: 0px 38px;
+    font-size: 15px;
+  }
+.crouselimage img {
+  height: 534px;
+}
+.latestnewshead{
+    width: 100%;
+}
+
+.latestnews, .addmission, .academics, .events, .research, .about, .campus {
+  height: 111px;
+}
+.btnapply {
+  top: 55%;
+}
+ .latestnews-section .carousel .card-1, .carousel .card-2, .carousel .card-3 {
+  width: 90%;
+ }
+ .admissioncrousel {
+ width: 34%;
+ margin-left: 10%;
+ }
+ .admissionhead {
+  margin-left:5%;
+    width: 109%;
+}
+.academicscrousel {
+  width: 39%;
+  margin-left: 29%;
+}
+.aboutmerit {
+  width:28%;
+}
+#one{
+  width: 85%;
+}
+.aboutcontent .aboutmerit .aboutcro2 {
+  width: 56%;
+}
+} 
