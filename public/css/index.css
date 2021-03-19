@@ -97,7 +97,8 @@ header {
 
 .menu ul li ul li {
   display: block;
-  width: 200px;
+  width: 258px;
+    height: 85px;
 }
 
 .menu ul li ul li a {
@@ -2085,4 +2086,10 @@ footer ul {
 .aboutcontent .aboutmerit .aboutcro2 {
   width: 56%;
 }
-} 
+}
+.latestbutton a{
+  color: #13439C;
+}
+.latestbutton:hover a{
+  color: white;
+}
