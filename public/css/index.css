@@ -400,7 +400,11 @@ button {
   content: "\f19c";
   font-size: 26px;
  }
-
+ @media screen and (max-width: 1700px){
+  .crouselimage img {
+    height: 85vh;
+}
+ }
 
 @media screen and (max-width: 1657px) {
   .crouselimage img {
@@ -410,15 +414,21 @@ button {
 }
 @media screen and (max-width: 1650px){
   .crouselimage img {
-    height:454px;
+    height:75vh;
 }
 }
 @media screen and (max-width: 1250px){
   .crouselimage img {
-    height:363px;
+    height:320px;
 }
+
 .btnapply {
   top: 34%
+}
+}
+@media screen and (max-width: 1454px){
+  .crouselimage img {
+    height:70vh;
 }
 }
 @media screen and (max-width: 1024px) {
@@ -1164,7 +1174,7 @@ color: white;
 }
 .latestnewshead,.admissionhead{
   width: 100%;
-  height:46%;
+  height:117%;
 background-color: #13439C;
 }
 .latestbutton,.addmisiionbutton{
@@ -1322,6 +1332,8 @@ height: 290px;
  }
  .admissionhead{
    margin-left:5% ;
+   font-size: smaller;
+   height: 121%;
  }
  .admissioncrousel .item section{
    background-color: #000;
@@ -1674,7 +1686,7 @@ width: 9%;
 }
 
 .research-section{
-  height: 735px;
+  height: 815px;
 }
 
 
